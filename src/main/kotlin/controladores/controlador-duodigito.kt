@@ -20,7 +20,7 @@ fun proximoMultiploDeX(numero: Int, indice: Int): Int {
     return numero*indice
 }
 
-@CrossOrigin(origins = ["http://localhost:8080", "http://localhost:3000"])
+@CrossOrigin(origins = ["http://localhost:8080", "http://localhost:3000", "https://desafio-bridge.vercel.app/"])
 @RestController
 @RequestMapping("/duodigitos")
 class ControladorDuodigitos {
