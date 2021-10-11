@@ -18,8 +18,6 @@ plugins {
 apply plugin: 'kotlin'
 apply plugin: 'java'
 
-mainClassName = 'aplicacaoBridge.MainKt'
-
 jar {
     manifest {
         attributes: 'Main-class': 'aplicacaoBridge.MainKt'
