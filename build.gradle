@@ -18,12 +18,6 @@ plugins {
 apply plugin: 'kotlin'
 apply plugin: 'java'
 
-jar {
-    manifest {
-        attributes 'Main-Class': 'aplicacaoBridge.MainKt'
-    }
-}
-
 group 'org.example'
 version '1.0-SNAPSHOT'
 
@@ -41,4 +35,16 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-web:2.5.5"
     // https://mvnrepository.com/artifact/io.ktor/ktor-client-core
     implementation "io.ktor:ktor-client-core:1.6.4"
+}
+
+jar {
+    doFirst {
+        manifest {
+            if (!configurations.compile.isEmpty()) {
+                attributes(
+                        'Class-Path': configurations.compile.collect{it.toURI().toString()}.join(' '),
+                        'Main-Class': 'aplicacaoBridge.MainKt')
+            }
+        }
+    }
 }
