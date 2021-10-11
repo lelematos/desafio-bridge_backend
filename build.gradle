@@ -8,11 +8,13 @@ buildscript {
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.springframework.boot:spring-boot-starter-web:2.5.5"
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:2.5.5"
         classpath "io.ktor:ktor-client-core:1.6.4"
     }
 }
 
 plugins {
+    id "org.springframework.boot" version "2.5.5"
     id 'org.jetbrains.kotlin.jvm' version '1.5.30'
     id 'application'
 }
@@ -35,6 +37,8 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
     // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
     implementation "org.springframework.boot:spring-boot-starter-web:2.5.5"
+        // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
+    implementation "org.springframework.boot:spring-boot-gradle-plugin:2.5.5"
     // https://mvnrepository.com/artifact/io.ktor/ktor-client-core
     implementation "io.ktor:ktor-client-core:1.6.4"
 }
