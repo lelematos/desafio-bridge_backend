@@ -16,6 +16,13 @@ plugins {
 }
 
 apply plugin: 'kotlin'
+apply plugin: 'java'
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.company.project.MainClass'
+    }
+}
 
 group 'org.example'
 version '1.0-SNAPSHOT'
