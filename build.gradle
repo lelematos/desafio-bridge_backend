@@ -20,7 +20,7 @@ apply plugin: 'java'
 
 jar {
     manifest {
-        attributes 'Main-Class': 'org.jetbrains.kotlin.demo.MainKt'
+        attributes 'Main-Class': 'aplicacaoBridge.MainKt'
     }
 }
 
