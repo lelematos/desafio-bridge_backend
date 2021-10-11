@@ -35,7 +35,7 @@ task stage {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
     // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
-    compile "org.springframework.boot:spring-boot-starter-web:2.5.5"
+    implementation "org.springframework.boot:spring-boot-starter-web:2.5.5"
     // https://mvnrepository.com/artifact/io.ktor/ktor-client-core
     implementation "io.ktor:ktor-client-core:1.6.4"
 }
