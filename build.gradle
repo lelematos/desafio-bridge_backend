@@ -7,6 +7,8 @@ buildscript {
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:2.5.5"
+        classpath "io.ktor:ktor-client-core:1.6.4"
     }
 }
 
