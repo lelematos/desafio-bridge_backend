@@ -37,14 +37,12 @@ dependencies {
     implementation "io.ktor:ktor-client-core:1.6.4"
 }
 
-jar {
-    doFirst {
-        manifest {
-            if (!configurations.compile.isEmpty()) {
-                attributes(
-                        'Class-Path': configurations.compile.collect{it.toURI().toString()}.join(' '),
-                        'Main-Class': 'aplicacaoBridge.MainKt')
-            }
-        }
+jar{
+    manifest {
+        attributes(
+                "Main-Class": "aplicacaoBridge.MainKt",                
+                "Class-Path":  configurations.implementation.collect { it.name }.join(' ')              
+        )
     }
+    dependsOn ('dependencies')
 }
