@@ -37,6 +37,10 @@ dependencies {
     implementation "io.ktor:ktor-client-core:1.6.4"
 }
 
+// by default, implementation cannot be referenced, 
+// this allows us to use it below
+project.configurations.implementation.setCanBeResolved(true)
+
 jar{
     manifest {
         attributes(
